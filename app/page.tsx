@@ -6,7 +6,7 @@ import Header from "./components/Header";
 import Cards from "./components/Cards";
 import ProgressBar from "./components/Progress";
 import SalesCharts from "./components/SalesCharts";
-import Box from '../assets/box-tick.svg'
+import Box from '../assets/3d-rotate.svg'
 import Cart  from '../assets/shopping-cart.svg'
 import Rotate  from '../assets/3d-rotate.svg'
 import Coin from '../assets/coin.svg'

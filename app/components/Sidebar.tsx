@@ -13,9 +13,9 @@ import {
   DocumentDownload,
 } from "iconsax-react";
 import { iconData, bottomIconData } from "./tokens/icons";
-import Home from "../assets/Home_Logo.svg";
-import Sun from "../assets/Light_Mode.svg";
-import Moon from "../assets/Dark_Mode.svg";
+import Home from "../../assets/Home_Logo.svg";
+import Sun from "../../assets/Light_Mode.svg";
+import Moon from "../../assets/Dark_Mode.svg";
 
 const Sidebar = () => {
   const [active,setActive] = React.useState(false)
