@@ -33,7 +33,7 @@ console.log( new Date().setMonth(3))
 const SalesCharts = () => {
   return (
     <div className={` ${Typography.body_medium.md} text-woodsmoke-600 flex h-full w-full  items-center `}>
-         <ResponsiveContainer width={"100%"} height={'95%'}>
+         <ResponsiveContainer className={'h-[10rem] sm:h-[95%]'} width={"100%"}>
       <BarChart width={60} data={data} className='rounded-md'>
         <defs>
           <linearGradient

@@ -53,10 +53,10 @@ const tableBody = tableBodyData.map((row, i) => {
       <TableCell className=" font-semibold">
         <p>${row.amount}</p>
       </TableCell>
-      <TableCell className={`text-left font-normal `}>
+      <TableCell className={`text-left font-normal hidden sm:block `}>
         <p className={`${statusFormatter(row.status)}`}>{row.status}</p>
       </TableCell>
-      <TableCell className="text-left flex gap-2 items-center">
+      <TableCell className="text-left hidden sm:flex gap-2 items-center">
         <DocumentDownload />
         <p>View</p>
       </TableCell>
@@ -66,7 +66,7 @@ const tableBody = tableBodyData.map((row, i) => {
 
 const TableComponent = () => {
   return (
-    <Table className="w-full h-full bg-blue-500">
+    <Table className="w-full h-full ">
       <TableHeader>
         <TableRow>
           <TableHead
@@ -85,12 +85,12 @@ const TableComponent = () => {
             Amount
           </TableHead>
           <TableHead
-            className={`${Typography.body_medium.lg} text-[#9cafab] text-left`}
+            className={`${Typography.body_medium.lg} hidden sm:block text-[#9cafab] text-left`}
           >
             Status
           </TableHead>
           <TableHead
-            className={`${Typography.body_medium.lg} text-[#9cafab] text-left`}
+            className={`${Typography.body_medium.lg} hidden sm:block text-[#9cafab] text-left`}
           >
             Invoice
           </TableHead>

@@ -6,22 +6,22 @@ import Header from "./components/Header";
 import Cards from "./components/Cards";
 import ProgressBar from "./components/Progress";
 import SalesCharts from "./components/SalesCharts";
-import Box from './assets/box-tick.svg'
-import Cart  from './assets/shopping-cart.svg'
-import Rotate  from './assets/3d-rotate.svg'
-import Coin from './assets/coin.svg'
+import Box from '../assets/box-tick.svg'
+import Cart  from '../assets/shopping-cart.svg'
+import Rotate  from '../assets/3d-rotate.svg'
+import Coin from '../assets/coin.svg'
 const jakarta = Plus_Jakarta_Sans({ subsets: ["latin"] });
 export default function Home() {
   return (
     <main
-      className={` ${jakarta.className} bg-slate-100/20 basis-11/12 flex min-h-screen flex-col items-center justify-between `}
+      className={` ${jakarta.className} overflow-x-scroll bg-slate-100/20 basis-11/12 flex min-h-screen flex-col items-center justify-between `}
     >
-      <div className="flex gap-8 h-full justify-between  flex-col w-full">
+      <div className="flex gap-8 overflow-y-scroll h-full justify-between  flex-col w-full">
         <Header />
       
-        <div className=" px-16 overflow-y-scroll w-full h-full  gap-4   items-center justify-around flex-col ">
-          <div className="  gap-8 col-span-12   flex items-center justify-around sm:col-span-8 ">
-            <div className=" border-[0.5px] basis-8/12 rounded-lg border-woodsmoke-500/10  flex flex-col items-center justify-between w-[90%] h-[30rem]">
+        <div className=" overflow-y-scroll flex flex-col px-4 sm:px-16  w-full h-full  gap-4   items-center justify-around ">
+          <div className="  gap-8 col-span-12   flex-col sm:flex-row flex items-center justify-around sm:col-span-8 ">
+            <div className="  border-[0.5px] basis-full sm:basis-8/12 rounded-lg border-woodsmoke-500/10  flex flex-col items-center justify-between w-[90%] sm:h-[30rem]">
               <div className=" flex  items-center justify-between w-full px-8">
                 <h3 className={`${Typography.body_semibold.xl}`}>
                   Sales Trends
@@ -36,7 +36,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className=" basis-5/12   gap-4  w-full grid grid-cols-12 place-items-center justify-center  ">
+            <div className=" basis-full sm:basis-5/12 sm:overflow-auto  gap-4  w-full grid grid-cols-12 place-items-center justify-center  ">
               <Cards icon={<Box  className='h-[24px] w-[24px]' />} profit={1} metric={350} />
               <Cards icon={<Rotate className='h-[24px] w-[24px]' />} profit={-1} metric={270}/>
               <Cards icon={<Cart className='h-[24px] w-[24px]' />} profit={-1} metric={1567} />
@@ -44,10 +44,10 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="  items-stretch  gap-6 flex bg-green-500 ">
+          <div className="flex-col px-4 sm:px-16 sm:flex-row items-stretch  gap-6 flex  w-full">
            
-          <div className="  flex flex-col  shadow-md bg-red-500 basis-8/12 ">
-              <div className=" bg-yellow-500 flex  items-center justify-between w-full px-8">
+          <div className="  flex flex-col  shadow-md  basis-full sm:basis-8/12 ">
+              <div className="  flex  items-center justify-between w-full px-4 sm:px-8">
                 <h3 className={`${Typography.body_semibold.xl}`}>
                   Last Orders
                 </h3>
@@ -57,15 +57,15 @@ export default function Home() {
                   </p>
                 </div>
               </div>
-              <div className="px-6 h-full table bg-purple-500">
+              <div className="sm:px-6 h-full  table ">
                 <Table />
               </div>
             </div>
 
             
 
-            <div className=" basis-5/12 bg-blue-500    w-full flex items-center justify-center  ">
-            <div className="w-full border-[0.5px] rounded-lg border-woodsmoke-300/15  px-8 h-full">
+            <div className=" basis-full sm:basis-5/12     w-full flex items-center justify-center  ">
+            <div className="w-full border-[0.5px] rounded-lg border-woodsmoke-300/15 px-4  sm:px-8 h-full">
                   <div className=" flex  items-center justify-between w-full px-2">
                     <h3 className={`${Typography.body_semibold.xl} ${Typography.Jakarta.className}`}>
                       Top Platforms
